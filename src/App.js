@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from "react";
+import * as Sentry from '@sentry/react';
 
 
 class App extends Component {
   render() {
+    Sentry.captureMessage("react-error-boundary app")
+
     return (
       <div className="App">
         <header className="App-header">
