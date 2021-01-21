@@ -10,6 +10,7 @@ Sentry.init({
   environment: "dev",
   debug: true
 });
+
 ReactDOM.render(
   <React.StrictMode>
     <Sentry.ErrorBoundary fallback={"An error has occurred"}>
