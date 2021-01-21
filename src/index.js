@@ -12,7 +12,9 @@ Sentry.init({
 });
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Sentry.ErrorBoundary fallback={"An error has occurred"}>
+      <App />
+    </Sentry.ErrorBoundary>;
   </React.StrictMode>,
   document.getElementById('root')
 );

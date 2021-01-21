@@ -5,8 +5,27 @@ import * as Sentry from '@sentry/react';
 
 
 class App extends Component {
+
+  /*
+  * componentDidMount is a lifecycle call back, part of component tree, so you will see componentStack on the issue in Sentry
+  * capturing a message because we don't want to terminate the entire program
+  */
+  componentDidMount() {
+    // componentStack present on Issue in Sentry
+    this.functionNotDefined()
+    // Sentry.captureMessage("componentDidMount") // not an error...
+  }
+
+  /*
+  * myMethod and the following error have nothing to do with the component tree, 
+  * so you will not see componentStack on the Issue in Sentry
+  */
+  myMethod() {
+    // componentStack not present on Issue in Sentry
+    this.notDefined()
+  }
+
   render() {
-    Sentry.captureMessage("react-error-boundary app")
 
     return (
       <div className="App">
@@ -15,14 +34,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <button onClick={this.myMethod}>No componentTree</button>
         </header>
       </div>
     );
@@ -30,3 +42,14 @@ class App extends Component {
 }
 
 export default App;
+
+// Sentry.captureMessage("react-error-boundary app")
+
+{/* <a
+className="App-link"
+href="https://reactjs.org"
+target="_blank"
+rel="noopener noreferrer"
+>
+Learn React
+</a> */}
