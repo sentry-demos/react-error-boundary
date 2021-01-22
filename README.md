@@ -23,4 +23,9 @@ If you use npm run build but don't upload sourcemaps, then your Component Stack 
 
 The component stack info is ultimately just a string, so hard to parse it against the source map, this is why it's not very pretty looking.  https://github.com/facebook/create-react-app/issues/6667
 
+## Documentation
 https://blog.sentry.io/2017/09/28/react-16-error-boundaries
+
+https://reactjs.org/docs/error-boundaries.html
+
+https://docs.sentry.io/platforms/javascript/guides/react/components/errorboundary/#setting-a-fallback-function-render-props
