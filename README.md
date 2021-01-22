@@ -16,5 +16,5 @@ The component stack info will be minified, because you have not uploaded source 
 ## Troubleshooting
 If you'd like to use `npm start` instead, then uncomment the code in componentDidMount in App.js, and this will cause an error and the Sentry Issue will have the Component Stack shown. The fallback UI component will not render in development mode (npm start).
 
-If you use npm run build but don't upload sourcemaps, then your Component Stack info will look minified just like your source bundle. This is a common problem that customers may encounter:  
+If you use npm run build but don't upload sourcemaps, then your Component Stack info will be minified just like your source bundle code. This is a common problem that customers may encounter:  
 ![ComponentStackMinified](./component-stack-minified.png)
