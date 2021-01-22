@@ -17,7 +17,7 @@ associate_commits:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --auto $(RELEASE)
 upload_sourcemaps:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) files $(RELEASE) \
-		upload-sourcemaps --url-prefix "~/$(PREFIX)" --validate react/build/$(PREFIX)
+		upload-sourcemaps --url-prefix "~/$(PREFIX)" --validate build/$(PREFIX)
 
 run:
 	./node_modules/serve/bin/serve.js -s build
