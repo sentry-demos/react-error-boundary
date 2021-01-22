@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component } from "react";
 import * as Sentry from '@sentry/react';
+import ChildComponent from './ChildComponent';
 
 
 class App extends Component {
@@ -12,8 +13,7 @@ class App extends Component {
   */
   componentDidMount() {
     // componentStack present on Issue in Sentry
-    this.functionNotDefined()
-    // Sentry.captureMessage("componentDidMount") // not an error...
+    // this.functionNotDefined()
   }
 
   /*
@@ -36,6 +36,7 @@ class App extends Component {
           </p>
           <button onClick={this.myMethod}>No componentTree</button>
         </header>
+        <ChildComponent/>
       </div>
     );
   }
