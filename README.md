@@ -22,3 +22,5 @@ If you use npm run build but don't upload sourcemaps, then your Component Stack 
 ![ComponentStackMinified](./component-stack-minified.png)
 
 The component stack info is ultimately just a string, so hard to parse it against the source map, this is why it's not very pretty looking.  https://github.com/facebook/create-react-app/issues/6667
+
+https://blog.sentry.io/2017/09/28/react-16-error-boundaries
