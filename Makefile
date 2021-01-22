@@ -2,13 +2,14 @@ SENTRY_ORG=will-captel
 SENTRY_PROJECT=javascript-1
 RELEASE=`sentry-cli releases propose-version`
 PREFIX=static/js
+SENTRY_LOG_LEVEL=debug
 
 all: build setup_release run
 
 build:
 	npm run build
 
-setup_release: create_release associate_commits upload_sourcemaps
+setup_release: create_release upload_sourcemaps
 
 create_release:
 	sentry-cli releases -o $(SENTRY_ORG) new -p $(SENTRY_PROJECT) $(RELEASE)
@@ -20,3 +21,5 @@ upload_sourcemaps:
 
 run:
 	./node_modules/serve/bin/serve.js -s build
+
+.PHONY: all build setup_release create_release associate_commits upload_sourcemaps run
