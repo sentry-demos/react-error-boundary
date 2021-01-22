@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { Component } from "react";
 import * as Sentry from '@sentry/react';
