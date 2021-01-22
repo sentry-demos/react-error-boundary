@@ -18,3 +18,5 @@ If you'd like to use `npm start` instead, then uncomment the code in componentDi
 
 If you use npm run build but don't upload sourcemaps, then your Component Stack info will be minified just like your source bundle code. This is a common problem that customers may encounter:  
 ![ComponentStackMinified](./component-stack-minified.png)
+
+The component stack info is ultimately just a string, so hard to parse it against the source map, this is why it's not very pretty looking.  https://github.com/facebook/create-react-app/issues/6667
