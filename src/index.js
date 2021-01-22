@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import * as Sentry from '@sentry/react';
 Sentry.init({
   dsn: "https://426a31c1b1614727b705cdece09484ff@o262702.ingest.sentry.io/5533979",
-  release: "1.0",
+  release: process.env.REACT_APP_RELEASE,
   environment: "dev",
   debug: true
 });
