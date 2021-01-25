@@ -1,7 +1,7 @@
 ## Description
-This app shows how Sentry's 'React Error Boundary' provides a fallback UI when the react component tree crashes, and provides "component stack" information on the error that gets sent up to Sentry. Example code was taken from https://docs.sentry.io/platforms/javascript/guides/react/components/errorboundary/#setting-a-fallback-function-render-props
+This app shows how Sentry's 'React Error Boundary' provides a fallback UI when the react component tree crashes, and provides "component stack" information on the error that gets sent up to Sentry. See App.js. [Example from docs.sentry.io](https://docs.sentry.io/platforms/javascript/guides/react/components/errorboundary/#setting-a-fallback-function-render-props) 
 
-The "component stack" spoken of here is viewable on the Sentry Issue like:
+The "component stack" spoken of here is viewable on the Sentry Issue like this:
 
 (this error was from a lifecycle callback error'ing)
 ![ComponentStackLifecycleError](./component-stack-lifecycle-error.png)
